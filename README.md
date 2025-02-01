@@ -1,16 +1,16 @@
-# GeradorDeSenha
+# GeradorDeCPF
 Este projeto implementa um gerador de senhas e um validador de CPF utilizando duas classes principais. O projeto está configurado com Webpack, Babel e CSS Loader para garantir a transpilação do código JavaScript e a inclusão de arquivos CSS no bundle final.
 
 # Classe do ValidarCPF
 A classe ValidarCPF é responsável por realizar a validação de um CPF. Ela contém quatro métodos, sendo um deles estático, permitindo sua utilização sem a necessidade de instanciar a classe.
 
-1.1 Método isSequencia()
+1. Método isSequencia()
 Este método verifica se o CPF fornecido é uma sequência numérica (como 111.111.111-11). A lógica é:
 
 O primeiro caractere do CPF é repetido até o final do CPF.
 Se o valor gerado pela repetição for igual ao CPF original, o método retorna true; caso contrário, retorna false.
 
-1.2 Método criaNovoCPF()
+2. Método criaNovoCPF()
 Este método gera um CPF parcial para fins de comparação. O processo é o seguinte:
 
 O CPF enviado (sem os dois últimos dígitos verificadores) é extraído utilizando o método slice.
@@ -18,7 +18,7 @@ Em seguida, o primeiro dígito verificador é gerado com o método estático cri
 O segundo dígito verificador é calculado da mesma forma, mas o primeiro dígito é passado como argumento para garantir o cálculo correto.
 Após a criação dos dois dígitos verificadores, eles são adicionados ao CPF parcial.
 
-1.3 Método criaDigito(cpfSemDigitos)
+3. Método criaDigito(cpfSemDigitos)
 Este método é responsável por calcular os dois dígitos verificadores de um CPF. O procedimento é o seguinte:
 
 Inicializam-se duas variáveis: total (inicializada com 0) e regressivo (que começa com o valor de cpfSemDigitos.length + 1, ou seja, 10 para um CPF de 9 dígitos).
@@ -26,7 +26,7 @@ Um loop percorre cada dígito de cpfSemDigitos e multiplica o valor do dígito p
 O peso é decrementado a cada iteração.
 Após o loop, o dígito verificador é calculado pela fórmula: digito = 11 - (total % 11). Caso o valor do dígito seja maior que 9, o método retorna 0; caso contrário, retorna o valor do dígito como string.
 
-1.4 Método valida()
+4. Método valida()
 Este método valida se o CPF enviado é válido, realizando as seguintes verificações:
 
 Se o CPF foi fornecido.
