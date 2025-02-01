@@ -10,7 +10,7 @@ Este método verifica se o CPF fornecido é uma sequência numérica (como 111.1
 
 O primeiro caractere do CPF é repetido até o final do CPF.
 Se o valor gerado pela repetição for igual ao CPF original, o método retorna true; caso contrário, retorna false.
-1.2 Método criaNovoCPF()
+# #1.2 Método criaNovoCPF()
 Este método gera um CPF parcial para fins de comparação. O processo é o seguinte:
 
 O CPF enviado (sem os dois últimos dígitos verificadores) é extraído utilizando o método slice.
