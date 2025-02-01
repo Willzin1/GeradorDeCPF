@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --primary-color: rgb(187, 114, 81);
+    --primary-color-darker: rgb(80, 48, 33);
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 640px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 40px;
+}
+
+.cpf-gerado {
+    font-size: 2em;
+    color: var(--primary-color);
+    text-decoration: underline solid 3px;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.btn-gera {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn-gera:hover {
+    opacity: 80%;
+    background-color: var(--primary-color-darker);
+}
